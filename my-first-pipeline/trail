@@ -5,7 +5,7 @@ pipeline {
          }
     }
     stages {
-        satge('build') {
+        stage('build') {
             steps {
                 sh 'httpd -v'
                 sh 'sleep 300'
