@@ -1,0 +1,20 @@
+pipeline {
+    agent {
+        docker {
+         image 'httpd:latest'
+         }
+    }
+    stages {
+        satge('build') {
+            steps {
+                sh 'httpd -v'
+                sh 'sleep 300'
+            }
+        }
+        stage('test') {
+            steps {
+            sh 'echo running tests'
+            }
+        }
+    }
+}
